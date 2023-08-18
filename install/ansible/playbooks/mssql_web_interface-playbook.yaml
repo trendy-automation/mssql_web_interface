@@ -1,0 +1,10 @@
+- hosts: ubuntu-cv
+  remote_user: root
+  gather_facts: yes
+  become: yes
+  vars:
+    system_user: root
+
+  roles:
+  - docker-compose
+  - mssql_web_interface

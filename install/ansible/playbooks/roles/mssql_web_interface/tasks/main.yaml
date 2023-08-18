@@ -1,0 +1,32 @@
+---
+# Clone git repo
+- name: Clone a repo with separate git directory
+  ansible.builtin.git:
+    repo: https://github.com/trendy-automation/mssql_web_interface
+    dest: /mssql_web_interface
+    force: yes
+
+# Copy python files to appdata into docker-compose folder
+- name: Copy python files
+  copy:
+    src: /mssql_web_interface/docker-compose/appdata
+    dest: /mssql_web_interface/docker-compose/appdata/
+    owner: "{{ system_user }}"
+    #group: root
+    mode: 01777
+    remote_src: yes
+    directory_mode: yes
+    
+- name: update appdata mode
+  file:
+    path: /mssql_web_interface/docker-compose/appdata/
+    owner: "{{ system_user }}"
+    #group: root
+    mode: 01777
+    
+# Docker up
+- name: deploy Docker Compose stack
+  community.docker.docker_compose:
+    project_src: /mssql_web_interface/docker-compose/
+    files:
+    - docker-compose.yaml

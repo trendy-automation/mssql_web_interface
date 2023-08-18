@@ -1,0 +1,22 @@
+#!/bin/bash
+#sudo apt install -y openssh-server
+# on computer vision PC
+
+#install docker compose
+#insted https://docs.docker.com/engine/install/ubuntu/
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+sudo usermod -aG docker $USER
+sudo apt  install -y docker-compose 
+
+#download repo application + platform
+git clone https://github.com/trendy-automation/mssql_web_interface mssql_web_interface
+
+# copy application to docker volume
+cd mssql_web_interface
+cp -ir python docker-compose/appdata
+cd docker-compose
+
+
+# docker compose up
+sudo docker-compose up --build -d

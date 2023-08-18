@@ -1,0 +1,51 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Locale
+ENV LANG ru_RU.UTF-8 \
+    LANGUAGE ru_RU:ru \
+    LC_LANG ru_RU.UTF-8 \
+    LC_ALL ru_RU.UTF-8 \
+# +Timezone
+    TZ=Europe/Moscow
+
+RUN apt-get update \
+    && apt-get install -y locales \
+    && sed -i -e \
+    's/# ru_RU.UTF-8 UTF-8/ru_RU.UTF-8 UTF-8/' /etc/locale.gen \
+    && locale-gen \
+    && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+    && rm -rf /var/lib/apt/lists/*
+
+	
+RUN apt-get update \ 
+  && apt-get install -y python3-pip python3-dev \
+  && cd /usr/local/bin \
+  && ln -s /usr/bin/python3 python \
+  && pip3 --no-cache-dir  install --upgrade pip \
+     beautifulsoup4~=4.11.1 \
+     Flask~=2.2.2 \
+     Flask_SocketIO~=5.3.1 \
+     requests~=2.28.1 \
+     uiweb \
+     lxml \
+  && rm -rf /var/lib/apt/lists/*
+  
+  
+  
+#RUN if ! [[ "18.04 20.04 22.04 23.04" == *"$(lsb_release -rs)"* ]]; then echo "Ubuntu $(lsb_release -rs) is not currently supported."; else "Ubuntu release is $(lsb_release -rs)"; exit; fi
+	
+	
+RUN apt-get update && \
+    apt-get install -y curl && \
+    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | tee /etc/apt/trusted.gpg.d/mssql.gpg && \
+    echo "deb [arch=amd64,armhf,arm64] https://packages.microsoft.com/ubuntu/22.04/prod jammy main" | tee /etc/apt/sources.list.d/mssql-release.list && \
+	apt-get update && \
+    ACCEPT_EULA=Y apt-get install -y msodbcsql18 unixodbc-dev
+	
+RUN  pip3 --no-cache-dir install --upgrade pip \
+	 pandas \
+	 pyodbc \
+	 #python-certifi-win32 \
+  && rm -rf /var/lib/apt/lists/*

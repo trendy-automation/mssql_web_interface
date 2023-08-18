@@ -1,0 +1,23 @@
+to deploy:
+  on pc-cv:
+    sudo echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
+    sudo echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
+    sudo ip a
+    sudo systemctl restart ssh.service
+    sudo ip link set enp0s8 up
+    sudo netplan apply
+    sudo passwd root
+    #ip addr add 192.168.1.12/24 dev enp0s3
+
+  on master:
+    cd /mssql_web_interface
+    docker build install -t mssql_web_interface-deploy
+    docker run --rm -it -v $(pwd)/install/ansible/playbooks:/ansible/playbooks mssql_web_interface-deploy install/mssql_web_interface-playbook.yaml --extra-vars "ansible_sudo_pass=3470"
+    # to check user user
+    # install jenkins plugins
+    http://192.168.1.12:8080/
+
+to test:
+  on master:
+    docker build /mssql_web_interface/jupyter -t jupyter-notebook
+    docker run -it --rm -p 8888:8888 -v /mssql_web_interface/jupyter:/home/jovyan/work -v /dev:/dev --device-cgroup-rule "c 81:* rmw" --device-cgroup-rule "c 189:* rmw" jupyter-notebook

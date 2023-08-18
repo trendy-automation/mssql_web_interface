@@ -1,0 +1,13 @@
+  on master:
+    # Windows
+    cd /mssql_web_interface
+    docker build ($pwd)/jupyter  -t jupyter-notebook
+    docker run -it --rm -p 10000:8888 -v ($pwd)/jupyter:/home/jovyan/work jupyter-notebook --device=/dev/video0:/dev/video0
+    # Ubuntu
+    cd /mssql_web_interface
+    docker build ./jupyter  -t jupyter-notebook
+    #VirtualBox
+    docker run -it --rm -p 8888:8888 -v /mssql_web_interface/jupyter:/home/jovyan/work --device-cgroup-rule "c 81:* rmw" -v /dev:/dev --device-cgroup-rule "c 189:* rmw" jupyter-notebook
+    #RealPC
+    docker run -it --rm -p 8888:8888 -p 9002:9002 -v /home/user/mssql_web_interface/jupyter:/home/jovyan/work --device-cgroup-rule "c 81:* rmw" -v /dev:/dev --device-cgroup-rule "c 189:* rmw" jupyter-notebook
+    rs-enumerate-devices

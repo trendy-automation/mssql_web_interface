@@ -1,0 +1,58 @@
+#!groovy
+// Run docker build
+properties([disableConcurrentBuilds()])
+
+pipeline {
+    agent { 
+        label 'jenkins_agent'
+        }
+    triggers { pollSCM('* * * * *') }
+    options {
+        skipDefaultCheckout(true)
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        timestamps()
+    }
+    
+    environment {
+        source_repo = 'https://github.com/trendy-automation/mssql_web_interface.git'
+        source_path = 'docker-compose/appdata'
+        target_path = '/var/docker-compose'
+    }
+    
+    stages {
+        stage("clean workspace") {
+            steps {
+                echo " ============== clean workspace =================="
+                cleanWs()
+            }
+        }
+        stage("checkout") {
+            steps {
+                echo " ============== checkout =================="
+                git url: source_repo
+            }
+        }
+        stage ("stop simpleweb") {
+            steps {
+                //script {try {} catch(error) {}}
+                        echo " ============== stop simpleweb =================="
+                        sh 'curl -XPOST --unix-socket /var/run/docker.sock http://localhost/containers/simpleweb/stop'
+            }
+        }
+        stage ("clean & copy appdata") {
+            steps {
+                echo " ============== clean appdata =================="
+                sh 'find $target_path/$source_path -type f ! -name debug.log -exec rm -R {} \\;'
+                //sh 'find $target_path -type f ! -name "debug.log" -and -type d ! -name "__pycache__" -delete \\;'
+                echo " ============== copy app =================="
+                sh 'cp -ir $source_path $target_path'
+            }
+        }
+        stage ("start simpleweb") {
+            steps {
+                        echo " ============== start simpleweb =================="
+                        sh 'curl -XPOST --unix-socket /var/run/docker.sock http://localhost/containers/simpleweb/start'
+            }
+        }
+    }
+}
