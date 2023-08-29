@@ -50,4 +50,5 @@ RUN  pip3 --no-cache-dir install --upgrade pip \
 	 SQLAlchemy \
 	 sqlmodel \
 	 alembic \
+	 traceback2 \
   && rm -rf /var/lib/apt/lists/*
