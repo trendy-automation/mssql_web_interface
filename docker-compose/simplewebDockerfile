@@ -49,4 +49,5 @@ RUN  pip3 --no-cache-dir install --upgrade pip \
 	 pyodbc \
 	 SQLAlchemy \
 	 sqlmodel \
+	 alembic \
   && rm -rf /var/lib/apt/lists/*

@@ -62,6 +62,14 @@ services:
       python3 /var/appdata/simpleweb-main/app.py"
     tty: true
     restart: always
+    environment:
+      - DB_PROVIDER=mssql+pyodbc
+      - DB_USER=sa
+      - DB_PASSWORD=PLC_%40ccess_test_1
+      - DB_SERVER=ILYA
+      - DB_PORT=1433
+      - DB_DBNAME=msdb
+      - DB_DRIVER=ODBC+Driver+18+for+SQL+Server
   mssql:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: mssql
