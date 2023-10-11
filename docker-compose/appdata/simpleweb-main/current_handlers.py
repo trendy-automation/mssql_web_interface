@@ -39,6 +39,23 @@ def sql_test(hashMap, _files=None, _data=None):
         rfid_2 = RFID(RFID_text="#2")
         rfid_3 = RFID(RFID_text="#3")
 
+
+        with Session(engine) as session:
+            session.add(part_1)
+            session.add(part_2)
+            session.add(part_3)
+            session.add(rfid_1)
+            session.add(rfid_2)
+            session.add(rfid_3)
+            session.commit()
+
+        with Session(engine) as session:
+            statement = select(Pallet).where(Pallet.RFID_id == 1)
+            pallet = session.exec(statement).first()
+            pallet_1 = Pallet(RFID_text="#1")
+            pallet_2 = Pallet(RFID_text="#2")
+            pallet_3 = Pallet(RFID_text="#3")
+
         with Session(engine) as session:
             session.add(part_1)
             session.add(part_2)

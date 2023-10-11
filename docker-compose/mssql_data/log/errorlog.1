@@ -1,109 +1,185 @@
-2023-08-29 09:41:37.14 Server      Microsoft SQL Server 2022 (RTM-CU5) (KB5026806) - 16.0.4045.3 (X64) 
+2023-08-29 10:31:55.64 Server      Microsoft SQL Server 2022 (RTM-CU5) (KB5026806) - 16.0.4045.3 (X64) 
 	May 26 2023 12:52:08 
 	Copyright (C) 2022 Microsoft Corporation
 	Developer Edition (64-bit) on Linux (Ubuntu 20.04.6 LTS) <X64>
-2023-08-29 09:41:37.14 Server      UTC adjustment: 0:00
-2023-08-29 09:41:37.15 Server      (c) Microsoft Corporation.
-2023-08-29 09:41:37.15 Server      All rights reserved.
-2023-08-29 09:41:37.15 Server      Server process ID is 588.
-2023-08-29 09:41:37.15 Server      Logging SQL Server messages in file '/var/opt/mssql/log/errorlog'.
-2023-08-29 09:41:37.15 Server      Registry startup parameters: 
+2023-08-29 10:31:55.64 Server      UTC adjustment: 0:00
+2023-08-29 10:31:55.64 Server      (c) Microsoft Corporation.
+2023-08-29 10:31:55.64 Server      All rights reserved.
+2023-08-29 10:31:55.64 Server      Server process ID is 568.
+2023-08-29 10:31:55.64 Server      Logging SQL Server messages in file '/var/opt/mssql/log/errorlog'.
+2023-08-29 10:31:55.64 Server      Registry startup parameters: 
 	 -d /var/opt/mssql/data/master.mdf
 	 -l /var/opt/mssql/data/mastlog.ldf
 	 -e /var/opt/mssql/log/errorlog
-2023-08-29 09:41:37.36 Server      SQL Server detected 1 sockets with 10 cores per socket and 20 logical processors per socket, 20 total logical processors; using 20 logical processors based on SQL Server licensing. This is an informational message; no user action is required.
-2023-08-29 09:41:37.36 Server      SQL Server is starting at normal priority base (=7). This is an informational message only. No user action is required.
-2023-08-29 09:41:37.36 Server      Detected 6239 MB of RAM. This is an informational message; no user action is required.
-2023-08-29 09:41:38.69 Server      Using conventional memory in the memory manager.
-2023-08-29 09:41:38.69 Server      Detected pause instruction latency: 174 cycles.
-2023-08-29 09:41:38.69 Server      Spin divider value used: 4
-2023-08-29 09:41:38.69 Server      Page exclusion bitmap is enabled.
-2023-08-29 09:41:38.75 Server      Buffer pool extension is not supported on Linux platform.
-2023-08-29 09:41:38.75 Server      Buffer Pool: Allocating 1048576 bytes for 897422 hashPages.
-2023-08-29 09:41:38.81 Server      Automatic soft-NUMA was enabled because SQL Server has detected hardware NUMA nodes with greater than 8 physical cores.
-2023-08-29 09:41:38.89 Server      Buffer pool extension is already disabled. No action is necessary.
-2023-08-29 09:41:39.39 Server      Installing Client TLS certificates to the store.
-2023-08-29 09:41:39.40 Server      Error searching first file in /var/opt/mssql/security/ca-certificates: 3(The system cannot find the path specified.)
-2023-08-29 09:41:39.40 Server      CPU vectorization level(s) detected:  SSE SSE2 SSE3 SSSE3 SSE41 SSE42 AVX AVX2 POPCNT BMI1 BMI2
-2023-08-29 09:41:39.47 Server      Successfully initialized the TLS configuration. Allowed TLS protocol versions are ['1.0 1.1 1.2']. Allowed TLS ciphers are ['ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA'].
-2023-08-29 09:41:39.49 Server      Query Store settings initialized with enabled = 1, 
-2023-08-29 09:41:39.51 Server      The maximum number of dedicated administrator connections for this instance is '1'
-2023-08-29 09:41:39.51 Server      Node configuration: node 0: CPU mask: 0x0000000000055555:0 Active CPU mask: 0x0000000000055555:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.
-2023-08-29 09:41:39.51 Server      Node configuration: node 1: CPU mask: 0x00000000000aaaaa:0 Active CPU mask: 0x00000000000aaaaa:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.
-2023-08-29 09:41:39.53 Server      Using dynamic lock allocation.  Initial allocation of 2500 Lock blocks and 5000 Lock Owner blocks per node.  This is an informational message only.  No user action is required.
-2023-08-29 09:41:39.53 Server      Lock partitioning is enabled.  This is an informational message only. No user action is required.
-2023-08-29 09:41:39.56 Server      In-Memory OLTP initialized on lowend machine.
-2023-08-29 09:41:39.62 Server      CLR version v4.0.30319 loaded.
-2023-08-29 09:41:39.80 Server      Common language runtime (CLR) functionality initialized.
-2023-08-29 09:41:40.85 Server      [INFO] Created Extended Events session 'hkenginexesession'
-2023-08-29 09:41:40.86 Server      Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-2023-08-29 09:41:40.87 Server      Total Log Writer threads: 4, Node CPUs: 5, Nodes: 2, Log Writer threads per CPU: 1, Log Writer threads per Node: 2
-2023-08-29 09:41:40.88 Server      clwb is selected for pmem flush operation.
-2023-08-29 09:41:40.88 Server      Software Usage Metrics is disabled.
-2023-08-29 09:41:40.90 spid45s     [1]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2023-08-29 09:41:40.90 spid45s     Starting up database 'master'.
-2023-08-29 09:41:41.93 spid45s     13 transactions rolled forward in database 'master' (1:0). This is an informational message only. No user action is required.
-2023-08-29 09:41:42.00 spid45s     0 transactions rolled back in database 'master' (1:0). This is an informational message only. No user action is required.
-2023-08-29 09:41:42.00 spid45s     Recovery is writing a checkpoint in database 'master' (1). This is an informational message only. No user action is required.
-2023-08-29 09:41:42.23 spid45s     [32762]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2023-08-29 09:41:42.23 spid45s     Starting up database 'model_replicatedmaster'.
-2023-08-29 09:41:42.26 spid47s     [32767]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2023-08-29 09:41:42.26 spid47s     Starting up database 'mssqlsystemresource'.
-2023-08-29 09:41:42.27 spid47s     The resource database build version is 16.00.4045. This is an informational message only. No user action is required.
-2023-08-29 09:41:42.29 spid47s     [3]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2023-08-29 09:41:42.30 spid47s     Starting up database 'model'.
-2023-08-29 09:41:42.44 spid56s     A self-generated certificate was successfully loaded for encryption.
-2023-08-29 09:41:42.44 spid56s     Server is listening on [ 'any' <ipv6> 1433] accept sockets 1.
-2023-08-29 09:41:42.45 spid56s     Server is listening on [ 'any' <ipv4> 1433] accept sockets 1.
-2023-08-29 09:41:42.45 Server      Server is listening on [ ::1 <ipv6> 1434] accept sockets 1.
-2023-08-29 09:41:42.45 Server      Server is listening on [ 127.0.0.1 <ipv4> 1434] accept sockets 1.
-2023-08-29 09:41:42.46 Server      Dedicated admin connection support was established for listening locally on port 1434.
-2023-08-29 09:41:42.46 spid56s     Server is listening on [ ::1 <ipv6> 1431] accept sockets 1.
-2023-08-29 09:41:42.46 spid56s     Server is listening on [ 127.0.0.1 <ipv4> 1431] accept sockets 1.
-2023-08-29 09:41:42.46 spid56s     SQL Server is now ready for client connections. This is an informational message; no user action is required.
-2023-08-29 09:41:43.49 spid45s     1 transactions rolled forward in database 'model_replicatedmaster' (32762:0). This is an informational message only. No user action is required.
-2023-08-29 09:41:43.65 spid45s     0 transactions rolled back in database 'model_replicatedmaster' (32762:0). This is an informational message only. No user action is required.
-2023-08-29 09:41:44.15 spid45s     [32761]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2023-08-29 09:41:44.15 spid45s     Starting up database 'model_msdb'.
-2023-08-29 09:41:45.21 spid45s     1 transactions rolled forward in database 'model_msdb' (32761:0). This is an informational message only. No user action is required.
-2023-08-29 09:41:45.26 spid45s     0 transactions rolled back in database 'model_msdb' (32761:0). This is an informational message only. No user action is required.
-2023-08-29 09:41:45.35 spid45s     Resource governor reconfiguration succeeded.
-2023-08-29 09:41:45.35 spid58s     External governance manager initialized
-2023-08-29 09:41:45.36 spid45s     SQL Server Audit is starting the audits. This is an informational message. No user action is required.
-2023-08-29 09:41:45.36 spid58s     Attribute synchronization manager initialized
-2023-08-29 09:41:45.36 spid45s     SQL Server Audit has started the audits. This is an informational message. No user action is required.
-2023-08-29 09:41:45.37 spid45s     XE session 'system_health' started.
-2023-08-29 09:41:45.76 spid45s     XE session 'telemetry_xevents' started.
-2023-08-29 09:41:45.88 spid45s     SQL Trace ID 1 was started by login "sa".
-2023-08-29 09:41:45.90 spid45s     Server name is 'c7dbf0b03e30'. This is an informational message only. No user action is required.
-2023-08-29 09:41:45.93 spid80s     Always On: The availability replica manager is starting. This is an informational message only. No user action is required.
-2023-08-29 09:41:45.93 spid47s     Clearing tempdb database.
-2023-08-29 09:41:45.93 spid80s     Always On: The availability replica manager is waiting for the instance of SQL Server to allow client connections. This is an informational message only. No user action is required.
-2023-08-29 09:41:45.93 spid84s     [4]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2023-08-29 09:41:45.94 spid84s     Starting up database 'msdb'.
-2023-08-29 09:41:47.21 spid84s     11 transactions rolled forward in database 'msdb' (4:0). This is an informational message only. No user action is required.
-2023-08-29 09:41:47.34 spid45s     0 transactions rolled back in database 'msdb' (4:0). This is an informational message only. No user action is required.
-2023-08-29 09:41:47.34 spid45s     Recovery is writing a checkpoint in database 'msdb' (4). This is an informational message only. No user action is required.
-2023-08-29 09:41:48.93 spid47s     [2]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
-2023-08-29 09:41:48.93 spid47s     Starting up database 'tempdb'.
-2023-08-29 09:41:50.91 spid44s     Using 'dbghelp.dll' version '4.0.5'
-2023-08-29 09:41:59.34 spid47s     The tempdb database has 8 data file(s).
-2023-08-29 09:41:59.38 spid80s     The Service Broker endpoint is in disabled or stopped state.
-2023-08-29 09:41:59.39 spid80s     The Database Mirroring endpoint is in disabled or stopped state.
-2023-08-29 09:41:59.47 spid80s     Service Broker manager has started.
-2023-08-29 09:41:59.47 spid45s     Recovery is complete. This is an informational message only. No user action is required.
-2023-08-29 09:46:38.13 spid86      XE session 'telemetry_xevents' stopping.
-2023-08-29 09:46:38.18 spid86      XE session 'telemetry_xevents' started.
-2023-08-29 09:46:55.71 spid86      Attempting to load library 'xplog70.dll' into memory. This is an informational message only. No user action is required.
-2023-08-29 09:46:55.74 spid86      Using 'xplog70.dll' version '2022.160.4045' to execute extended stored procedure 'xp_msver'. This is an informational message only; no user action is required.
-2023-08-29 09:59:09.54 spid52      XE session 'telemetry_xevents' stopping.
-2023-08-29 09:59:09.57 spid52      XE session 'telemetry_xevents' started.
-2023-08-29 10:28:25.18 spid45s     Always On: The availability replica manager is going offline because SQL Server is shutting down. This is an informational message only. No user action is required.
-2023-08-29 10:28:25.18 spid45s     SQL Server is terminating in response to a 'stop' request from Service Control Manager. This is an informational message only. No user action is required.
-2023-08-29 10:28:25.20 spid45s     .NET Framework runtime has been stopped.
-2023-08-29 10:28:25.29 spid45s     RBPEX::NotifyFileShutdown: Called for database ID: [32762], file Id [0]
-2023-08-29 10:28:25.31 spid80s     Service Broker manager has shut down.
-2023-08-29 10:28:25.45 spid45s     RBPEX::NotifyFileShutdown: Called for database ID: [32761], file Id [0]
-2023-08-29 10:28:25.55 spid45s     RBPEX::NotifyFileShutdown: Called for database ID: [4], file Id [0]
-2023-08-29 10:28:25.63 spid45s     RBPEX::NotifyFileShutdown: Called for database ID: [3], file Id [0]
-2023-08-29 10:28:25.74 spid45s     SQL Trace was stopped due to server shutdown. Trace ID = '1'. This is an informational message only; no user action is required.
+2023-08-29 10:31:55.66 Server      SQL Server detected 1 sockets with 10 cores per socket and 20 logical processors per socket, 20 total logical processors; using 20 logical processors based on SQL Server licensing. This is an informational message; no user action is required.
+2023-08-29 10:31:55.66 Server      SQL Server is starting at normal priority base (=7). This is an informational message only. No user action is required.
+2023-08-29 10:31:55.66 Server      Detected 6239 MB of RAM. This is an informational message; no user action is required.
+2023-08-29 10:31:55.66 Server      Using conventional memory in the memory manager.
+2023-08-29 10:31:55.66 Server      Detected pause instruction latency: 130 cycles.
+2023-08-29 10:31:55.66 Server      Spin divider value used: 3
+2023-08-29 10:31:55.67 Server      Page exclusion bitmap is enabled.
+2023-08-29 10:31:55.71 Server      Buffer pool extension is not supported on Linux platform.
+2023-08-29 10:31:55.72 Server      Buffer Pool: Allocating 1048576 bytes for 897496 hashPages.
+2023-08-29 10:31:55.77 Server      Automatic soft-NUMA was enabled because SQL Server has detected hardware NUMA nodes with greater than 8 physical cores.
+2023-08-29 10:31:55.85 Server      Buffer pool extension is already disabled. No action is necessary.
+2023-08-29 10:31:56.16 Server      Installing Client TLS certificates to the store.
+2023-08-29 10:31:56.16 Server      Error searching first file in /var/opt/mssql/security/ca-certificates: 3(The system cannot find the path specified.)
+2023-08-29 10:31:56.17 Server      CPU vectorization level(s) detected:  SSE SSE2 SSE3 SSSE3 SSE41 SSE42 AVX AVX2 POPCNT BMI1 BMI2
+2023-08-29 10:31:56.21 Server      Successfully initialized the TLS configuration. Allowed TLS protocol versions are ['1.0 1.1 1.2']. Allowed TLS ciphers are ['ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA'].
+2023-08-29 10:31:56.24 Server      Query Store settings initialized with enabled = 1, 
+2023-08-29 10:31:56.25 Server      The maximum number of dedicated administrator connections for this instance is '1'
+2023-08-29 10:31:56.25 Server      Node configuration: node 0: CPU mask: 0x0000000000055555:0 Active CPU mask: 0x0000000000055555:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.
+2023-08-29 10:31:56.25 Server      Node configuration: node 1: CPU mask: 0x00000000000aaaaa:0 Active CPU mask: 0x00000000000aaaaa:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.
+2023-08-29 10:31:56.27 Server      Using dynamic lock allocation.  Initial allocation of 2500 Lock blocks and 5000 Lock Owner blocks per node.  This is an informational message only.  No user action is required.
+2023-08-29 10:31:56.27 Server      Lock partitioning is enabled.  This is an informational message only. No user action is required.
+2023-08-29 10:31:56.31 Server      In-Memory OLTP initialized on lowend machine.
+2023-08-29 10:31:56.36 Server      CLR version v4.0.30319 loaded.
+2023-08-29 10:31:56.56 Server      Common language runtime (CLR) functionality initialized.
+2023-08-29 10:31:56.75 Server      [INFO] Created Extended Events session 'hkenginexesession'
+2023-08-29 10:31:56.75 Server      Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+2023-08-29 10:31:56.77 Server      Total Log Writer threads: 4, Node CPUs: 5, Nodes: 2, Log Writer threads per CPU: 1, Log Writer threads per Node: 2
+2023-08-29 10:31:56.78 Server      clwb is selected for pmem flush operation.
+2023-08-29 10:31:56.78 Server      Software Usage Metrics is disabled.
+2023-08-29 10:31:56.79 spid44s     [1]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2023-08-29 10:31:56.80 spid44s     Starting up database 'master'.
+2023-08-29 10:31:57.87 spid44s     [32762]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2023-08-29 10:31:57.87 spid44s     Starting up database 'model_replicatedmaster'.
+2023-08-29 10:31:57.88 spid47s     [32767]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2023-08-29 10:31:57.89 spid47s     Starting up database 'mssqlsystemresource'.
+2023-08-29 10:31:57.89 spid47s     The resource database build version is 16.00.4045. This is an informational message only. No user action is required.
+2023-08-29 10:31:57.92 spid47s     [3]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2023-08-29 10:31:57.92 spid47s     Starting up database 'model'.
+2023-08-29 10:31:58.00 spid56s     A self-generated certificate was successfully loaded for encryption.
+2023-08-29 10:31:58.00 spid56s     Server is listening on [ 'any' <ipv6> 1433] accept sockets 1.
+2023-08-29 10:31:58.00 spid56s     Server is listening on [ 'any' <ipv4> 1433] accept sockets 1.
+2023-08-29 10:31:58.01 Server      Server is listening on [ ::1 <ipv6> 1434] accept sockets 1.
+2023-08-29 10:31:58.01 Server      Server is listening on [ 127.0.0.1 <ipv4> 1434] accept sockets 1.
+2023-08-29 10:31:58.01 Server      Dedicated admin connection support was established for listening locally on port 1434.
+2023-08-29 10:31:58.02 spid56s     Server is listening on [ ::1 <ipv6> 1431] accept sockets 1.
+2023-08-29 10:31:58.02 spid56s     Server is listening on [ 127.0.0.1 <ipv4> 1431] accept sockets 1.
+2023-08-29 10:31:58.02 spid56s     SQL Server is now ready for client connections. This is an informational message; no user action is required.
+2023-08-29 10:31:59.84 spid44s     [32761]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2023-08-29 10:31:59.84 spid44s     Starting up database 'model_msdb'.
+2023-08-29 10:32:03.30 spid44s     Resource governor reconfiguration succeeded.
+2023-08-29 10:32:03.30 spid60s     External governance manager initialized
+2023-08-29 10:32:03.31 spid44s     SQL Server Audit is starting the audits. This is an informational message. No user action is required.
+2023-08-29 10:32:03.31 spid60s     Attribute synchronization manager initialized
+2023-08-29 10:32:03.31 spid44s     SQL Server Audit has started the audits. This is an informational message. No user action is required.
+2023-08-29 10:32:03.32 spid44s     XE session 'system_health' started.
+2023-08-29 10:32:04.43 spid44s     XE session 'telemetry_xevents' started.
+2023-08-29 10:32:05.53 spid44s     SQL Trace ID 1 was started by login "sa".
+2023-08-29 10:32:06.67 spid44s     Server name is 'c7dbf0b03e30'. This is an informational message only. No user action is required.
+2023-08-29 10:32:06.71 spid77s     Always On: The availability replica manager is starting. This is an informational message only. No user action is required.
+2023-08-29 10:32:06.71 spid77s     Always On: The availability replica manager is waiting for the instance of SQL Server to allow client connections. This is an informational message only. No user action is required.
+2023-08-29 10:32:06.72 spid47s     Clearing tempdb database.
+2023-08-29 10:32:06.72 spid77s     [4]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2023-08-29 10:32:06.72 spid77s     Starting up database 'msdb'.
+2023-08-29 10:32:06.83 spid45s     Using 'dbghelp.dll' version '4.0.5'
+2023-08-29 10:32:14.28 spid47s     [2]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1. ConcurrentGAMUpdate: 1. ConcurrentSGAMUpdate: 1, CleanupUnderUserTransaction: 0. TranLevelPVS: 0
+2023-08-29 10:32:14.29 spid47s     Starting up database 'tempdb'.
+2023-08-29 10:32:26.20 spid47s     The tempdb database has 8 data file(s).
+2023-08-29 10:32:26.24 spid77s     The Service Broker endpoint is in disabled or stopped state.
+2023-08-29 10:32:26.24 spid77s     The Database Mirroring endpoint is in disabled or stopped state.
+2023-08-29 10:32:26.31 spid77s     Service Broker manager has started.
+2023-08-29 10:32:26.31 spid44s     Recovery is complete. This is an informational message only. No user action is required.
+2023-08-29 10:36:57.61 spid86      XE session 'telemetry_xevents' stopping.
+2023-08-29 10:36:57.63 spid86      XE session 'telemetry_xevents' started.
+2023-08-29 10:37:12.65 spid86      Attempting to load library 'xplog70.dll' into memory. This is an informational message only. No user action is required.
+2023-08-29 10:37:12.67 spid86      Using 'xplog70.dll' version '2022.160.4045' to execute extended stored procedure 'xp_msver'. This is an informational message only; no user action is required.
+2023-08-29 10:49:05.52 spid63      XE session 'telemetry_xevents' stopping.
+2023-08-29 10:49:05.54 spid63      XE session 'telemetry_xevents' started.
+2023-08-29 11:31:59.11 spid1s      [DevOpsSnapshotTelemetryTask] Evaluating the background task.
+2023-08-29 11:38:30.95 Logon       Error: 18456, Severity: 14, State: 8.
+2023-08-29 11:38:30.95 Logon       Login failed for user 'sa'. Reason: Password did not match that for the login provided. [CLIENT: 172.30.0.1]
+2023-08-29 11:39:32.86 Logon       Error: 18456, Severity: 14, State: 8.
+2023-08-29 11:39:32.86 Logon       Login failed for user 'sa'. Reason: Password did not match that for the login provided. [CLIENT: 172.30.0.1]
+2023-08-29 11:40:53.35 Logon       Error: 18456, Severity: 14, State: 8.
+2023-08-29 11:40:53.35 Logon       Login failed for user 'sa'. Reason: Password did not match that for the login provided. [CLIENT: 172.30.0.1]
+2023-08-29 11:42:21.83 Logon       Error: 18456, Severity: 14, State: 8.
+2023-08-29 11:42:21.83 Logon       Login failed for user 'sa'. Reason: Password did not match that for the login provided. [CLIENT: 172.30.0.1]
+2023-08-29 11:43:29.16 Logon       Error: 18456, Severity: 14, State: 8.
+2023-08-29 11:43:29.16 Logon       Login failed for user 'sa'. Reason: Password did not match that for the login provided. [CLIENT: 172.30.0.1]
+2023-08-29 11:44:54.12 Logon       Error: 18456, Severity: 14, State: 8.
+2023-08-29 11:44:54.12 Logon       Login failed for user 'sa'. Reason: Password did not match that for the login provided. [CLIENT: 172.30.0.1]
+2023-08-29 11:49:09.00 spid53      XE session 'telemetry_xevents' stopping.
+2023-08-29 11:49:09.03 spid53      XE session 'telemetry_xevents' started.
+2023-08-29 12:49:14.81 spid53      XE session 'telemetry_xevents' stopping.
+2023-08-29 12:49:14.84 spid53      XE session 'telemetry_xevents' started.
+2023-08-29 13:49:20.02 spid53      XE session 'telemetry_xevents' stopping.
+2023-08-29 13:49:20.05 spid53      XE session 'telemetry_xevents' started.
+2023-08-29 14:49:28.48 spid52      XE session 'telemetry_xevents' stopping.
+2023-08-29 14:49:28.51 spid52      XE session 'telemetry_xevents' started.
+2023-08-29 17:32:28.60 spid52      XE session 'telemetry_xevents' stopping.
+2023-08-29 17:32:28.63 spid52      XE session 'telemetry_xevents' started.
+2023-08-29 18:33:03.69 spid52      XE session 'telemetry_xevents' stopping.
+2023-08-29 18:33:03.71 spid52      XE session 'telemetry_xevents' started.
+2023-08-29 19:33:09.14 spid52      XE session 'telemetry_xevents' stopping.
+2023-08-29 19:33:09.16 spid52      XE session 'telemetry_xevents' started.
+2023-08-31 06:29:08.44 spid52      XE session 'telemetry_xevents' stopping.
+2023-08-31 06:29:08.48 spid52      XE session 'telemetry_xevents' started.
+2023-08-31 07:48:15.70 spid52      XE session 'telemetry_xevents' stopping.
+2023-08-31 07:48:15.72 spid52      XE session 'telemetry_xevents' started.
+2023-08-31 08:48:18.09 spid52      XE session 'telemetry_xevents' stopping.
+2023-08-31 08:48:18.11 spid52      XE session 'telemetry_xevents' started.
+2023-08-31 09:48:23.64 spid52      XE session 'telemetry_xevents' stopping.
+2023-08-31 09:48:23.69 spid52      XE session 'telemetry_xevents' started.
+2023-08-31 10:48:27.18 spid52      XE session 'telemetry_xevents' stopping.
+2023-08-31 10:48:27.21 spid52      XE session 'telemetry_xevents' started.
+2023-08-31 11:48:32.38 spid52      XE session 'telemetry_xevents' stopping.
+2023-08-31 11:48:32.47 spid52      XE session 'telemetry_xevents' started.
+2023-08-31 12:48:36.18 spid52      XE session 'telemetry_xevents' stopping.
+2023-08-31 12:48:36.23 spid52      XE session 'telemetry_xevents' started.
+2023-08-31 13:48:59.78 spid52      XE session 'telemetry_xevents' stopping.
+2023-08-31 13:49:00.02 spid52      XE session 'telemetry_xevents' started.
+2023-08-31 14:49:08.36 spid52      XE session 'telemetry_xevents' stopping.
+2023-08-31 14:49:08.43 spid52      XE session 'telemetry_xevents' started.
+2023-09-01 06:42:57.65 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-01 06:42:57.69 spid52      XE session 'telemetry_xevents' started.
+2023-09-01 07:43:01.61 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-01 07:43:01.65 spid52      XE session 'telemetry_xevents' started.
+2023-09-01 08:43:08.22 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-01 08:43:08.26 spid52      XE session 'telemetry_xevents' started.
+2023-09-01 09:43:14.51 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-01 09:43:14.57 spid52      XE session 'telemetry_xevents' started.
+2023-09-01 10:43:22.27 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-01 10:43:22.31 spid52      XE session 'telemetry_xevents' started.
+2023-09-01 11:43:26.67 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-01 11:43:26.70 spid52      XE session 'telemetry_xevents' started.
+2023-09-01 12:43:32.09 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-01 12:43:32.14 spid52      XE session 'telemetry_xevents' started.
+2023-09-01 13:51:22.23 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-01 13:51:22.35 spid52      XE session 'telemetry_xevents' started.
+2023-09-04 07:09:25.99 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-04 07:09:26.03 spid52      XE session 'telemetry_xevents' started.
+2023-09-04 08:09:30.27 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-04 08:09:30.36 spid52      XE session 'telemetry_xevents' started.
+2023-09-04 09:09:39.83 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-04 09:09:39.89 spid52      XE session 'telemetry_xevents' started.
+2023-09-04 10:09:47.60 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-04 10:09:47.65 spid52      XE session 'telemetry_xevents' started.
+2023-09-04 11:09:55.54 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-04 11:09:55.59 spid52      XE session 'telemetry_xevents' started.
+2023-09-04 12:10:01.95 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-04 12:10:01.99 spid52      XE session 'telemetry_xevents' started.
+2023-09-04 13:10:05.59 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-04 13:10:05.63 spid52      XE session 'telemetry_xevents' started.
+2023-09-04 14:10:10.96 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-04 14:10:10.99 spid52      XE session 'telemetry_xevents' started.
+2023-09-05 05:50:26.29 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-05 05:50:26.44 spid52      XE session 'telemetry_xevents' started.
+2023-09-05 06:51:47.96 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-05 06:51:48.00 spid52      XE session 'telemetry_xevents' started.
+2023-09-05 07:53:42.40 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-05 07:53:42.46 spid52      XE session 'telemetry_xevents' started.
+2023-09-05 08:55:48.12 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-05 08:55:48.15 spid52      XE session 'telemetry_xevents' started.
+2023-09-05 09:58:05.70 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-05 09:58:05.76 spid52      XE session 'telemetry_xevents' started.
+2023-09-05 11:00:30.82 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-05 11:00:30.84 spid52      XE session 'telemetry_xevents' started.
+2023-09-05 12:02:57.94 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-05 12:02:57.98 spid52      XE session 'telemetry_xevents' started.
+2023-09-05 13:05:26.51 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-05 13:05:26.63 spid52      XE session 'telemetry_xevents' started.
+2023-09-05 14:06:50.34 spid52      XE session 'telemetry_xevents' stopping.
+2023-09-05 14:06:50.40 spid52      XE session 'telemetry_xevents' started.
